@@ -34,15 +34,36 @@ The maximum possible groupings of adjacent ones are already shown in the figure.
 
 **Procedure**
 
+
 /* write all the steps invloved */
 
 **PROGRAM**
+```
+module ex7(clk, sin, q);
+input clk;
+input sin;
+output [3:0] q;
+reg [3:0] q;
+always @(posedge clk)
+begin
+q[0] <= sin;
+q[1] <= q[0];
+q[2] <= q[1];
+q[3] <= q[2];
+end
+endmodule
+```
 
 /* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by: RegisterNumber:
 */
 
 **RTL LOGIC FOR FLIPFLOPS**
 
+![Output](sr.png)
+
 **TIMING DIGRAMS FOR FLIP FLOPS**
 
+![Output](sr1.png)
+
 **RESULTS**
+Thus the SR flipflop is implemented and verified.
